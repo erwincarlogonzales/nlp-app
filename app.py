@@ -62,7 +62,7 @@ vectorizerTFIdf = joblib.load('models/vectorizer.pkl')
 vader = SentimentIntensityAnalyzer()
 
 # Initialize LIME text explainer
-lime_explainer = LimeTextExplainer(class_names= ['Positive', 'Neutral', 'Negative'])
+lime_explainer = LimeTextExplainer(class_names=['Positive', 'Neutral', 'Negative'])
 
 # Function to get the predictions from VADER and Naive Bayes
 def get_model_prediction(text):
@@ -128,7 +128,7 @@ if st.button('Analyze'):
         st.plotly_chart(fig, use_container_width=True)
         
         # LIME Explainer
-        st.subheader('LIMe Explanation for Naive Bayes')
+        st.subheader('LIME Explanation for Naive Bayes')
         exp = lime_explainer.explain_instance(
             user_input,
             predict_proba,
