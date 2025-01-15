@@ -8,7 +8,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from lime.lime_text import LimeTextExplainer
 
 # Add a hero image
-st.image('images/hero.jpg', use_column_width=True)
+st.image('images/hero.jpg', use_container_width=True)
 
 # Load time series data
 df_resampled = pd.read_csv('data/reviews_processed_tsa.csv')
